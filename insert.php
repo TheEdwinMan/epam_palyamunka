@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost','root','','epam')
+$con = mysqli_connect('localhost','root','','epam');
 mysqli_select_db($con,'logs');
 
 $uname = $_SESSION['username'];

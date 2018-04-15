@@ -46,6 +46,24 @@ function submitChate(e){
       return false;
   }
 }
+
+$(document).ready(function(e){
+$.ajaxSetup({cache:false});
+  $('#uzenetek').load('logs.php');
+  setTimeout(function (){
+    $('#uzenetek').load('logs.php');
+    var d = $('#uzenetek');
+    d.scrollTop(d.prop("scrollHeight"));
+  }, 10);
+}
+);
+
+$(document).ready(function(e){
+$.ajaxSetup({cache:false});
+setInterval(function(){
+  $('#uzenetek').load('logs.php');},100);
+}
+);
 </script>
 <div id="kozep">
   <div class="chat">

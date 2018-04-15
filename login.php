@@ -59,6 +59,7 @@ if(!isset($_SESSION['username'])){
 				setTimeout(function(){
 					$('#error_message').fadeOut("Slow");
 				}, 2000);
+
 			}
 			else{
 				$.ajax({
@@ -74,8 +75,8 @@ if(!isset($_SESSION['username'])){
 							}, 3000);
 						}
 						else{
-							document.getElementById('registered').style.display = 'block';
-							document.getElementById('alreadyh').style.display = 'none';
+							document.getElementById('loginform').style.display = 'block';
+							document.getElementById('register').style.display = 'none';
 							$('#message_log').html('');
 							$("form").trigger("reset");
 							$('#message_log').show().html("Sikeresen regisztáltál. Jelentkezz be!");

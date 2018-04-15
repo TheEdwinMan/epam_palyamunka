@@ -134,3 +134,55 @@ ul li a{
   border: 4px solid blue;
   text-align: center;
 }
+#kozep{
+  width: 500px;
+	margin: auto;
+}
+.chat{
+	background-color: #303030;
+	padding: 10px 10px 365px 10px;
+	height: 15px;
+  width: 100%;
+}
+#uzenetek{
+  background: white;
+  height: 300px;
+  padding: 10px 0 10px 10px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+.send{
+  float: left;
+  padding: 10px 0 0 0;
+}
+#msg{
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 365px;
+  height: 40px;
+  resize: none;
+}
+#chat-gomb{
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: blue;
+	width: 50px;
+	border: 0;
+	padding: 12px 37px 12px 37px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+  margin: 10px 0 10px 10px;
+  float: left;
+}
+#chat-gomb:hover{
+	background: #3232FF;
+}
+#chat-gomb:active{
+	background: #0000CD;
+}

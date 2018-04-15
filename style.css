@@ -186,3 +186,42 @@ ul li a{
 #chat-gomb:active{
 	background: #0000CD;
 }
+.input-tulajd{
+	position: relative;
+	z-index: 1;
+	background-color: #303030;
+	padding: 10px 10px 40px 10px;
+	text-align: center;
+	display: inline-block;
+	height: 15px;
+}
+.input-tulajd input{
+	font-family: "Roboto", sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	border: 0;
+	margin: 0 10px 15px 0;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	float:left;
+}
+.sttg-gomb{
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: blue;
+ 	width: 100px;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+	float: left;
+}
+.sttg-gomb:hover{
+	background: #3232FF;
+}
+.sttg-gomb:active{
+	background: #0000CD;
+}

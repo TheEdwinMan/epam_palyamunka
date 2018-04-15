@@ -112,7 +112,7 @@ if(!isset($_SESSION['username'])){
            });
          });
 
-      $('#settinh').click(function(){
+      $('#settings').click(function(){
             $.ajax({
               url: 'settings.php',
               success: function(data) {

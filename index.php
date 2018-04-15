@@ -94,23 +94,41 @@ if(!isset($_SESSION['username'])){
             $(this).css("background-color", "#303030");
            });
 
-		 $('#leiras').click(function(){
+		 $('#home').click(function(){
            $.ajax({
-             url: 'leiras.php',
+             url: 'home.php',
              success: function(data) {
                $('#in-content').html(data);
              }
            });
          });
 
-		 $('#login').click(function(){
+		 $('#chat').click(function(){
            $.ajax({
-             url: 'login.php',
+             url: 'chat.php',
              success: function(data) {
                $('#in-content').html(data);
              }
            });
          });
+
+      $('#settinh').click(function(){
+            $.ajax({
+              url: 'settings.php',
+              success: function(data) {
+                $('#in-content').html(data);
+              }
+            });
+          });
+
+      $('#ghub').click(function(){
+        $.ajax({
+          url: 'ghubt.php',
+          success: function(data) {
+            $('#in-content').html(data);
+          }
+        });
+      });
 
        });
   </script>

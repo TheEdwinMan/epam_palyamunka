@@ -132,11 +132,15 @@ if(!isset($_SESSION['username'])){
       </div>
       <div id="content">
         <div id="in-content">
-		<?php
-			include 'leiras.php'
-        ?>
+          <?php
+          include 'leiras.php'
+          ?>
         </div>
       </div>
+    </div>
+    <div id="nev">
+      Felhasználónév: <br>
+      <b><span id="f"><?php echo $_SESSION['username']; ?></span></b>
     </div>
   </body>
 </html>

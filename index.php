@@ -31,7 +31,6 @@
            });
          });
 
-		   
        });
   </script>
   </head>
@@ -40,7 +39,7 @@
       <div id="logo">
         <img id="kep" class="nkij" src="logo.png">
       </div>
-      <div id="Menu"> 
+      <div id="Menu">
         <ul class="cssmenu">
           <li><div class="aktv" id="leiras"><a class="nkij">Leírás</a></div></li>
           <li></li>

@@ -3,21 +3,21 @@ if(!isset($_SESSION['username'])){
 ?>
 <div class="login-page">
 	<div class="form">
-		<form id="register">
-			<input type="text" id="username" placeholder="Felhasználónév">
-			<input type="password" id="password" placeholder="Jelszó">
-			<input type="password" id="password2" placeholder="Jelszó megerősítése">
-			<div class="button" href="#"><a class="nkij">Regisztrálás</a><br></div>
-			<span class = "spanszin" id="error_message"></span
-			<p class = "message">Már regisztáltál? <a onclick = "hide();" href="#">Jelentkezz be</a></p>
-		</form>
-		<form id="loginform">
-			<input type="text" id="username_log" placeholder="Felhasználónév">
-			<input type="password" id="password_log" placeholder="Jelszó">
-			<div class="button" href="#"><a class="nkij">Bejelentkezés</a><br></div>
-			<span class = "spanszin" id="message_log"></span
-			<p class = "message">Nincs fiokod? <a onclick = "hide();" href="#">Regisztrálj</a></p>
-		</form>
+			<form id="register">
+				<input type="text" id="username" placeholder="Felhasználónév" onkeypress="return regise(event);">
+				<input type="password" id="password" placeholder="Jelszó" onkeypress="return regise(event);">
+				<input type="password" id="password2" placeholder="Jelszó megerősítése" onkeypress="return regise(event);">
+				<div class="button" href="#" id="regis" onclick="regis();"><a class="nkij">Regisztrálás</a><br></div>
+				<span class="spanszin" id="error_message"></span>
+				<p class="message">Már regisztráltál? <a onclick="hide();" href="#">Jelentkezz be</a></p>
+			</form>
+			<form id="loginform">
+				<input type="text" id="username_log" placeholder="Felhasználónév">
+				<input type="password" id="password_log" placeholder="Jelszó">
+				<div class="button" href="#"><a class="nkij">Bejelentkezés</a><br></div>
+				<span class = "spanszin" id="message_log"></span>
+				<p class="message">Nincs fiokod? <a onclick="hide();" href="#">Regisztálj</a></p>
+			</form>
 		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 		<script>
 			function hide(){
@@ -35,6 +35,114 @@ if(!isset($_SESSION['username'])){
 		</script>
 	</div>
 </div>
+<script>
+	function regis(){
+		var uname = $('#username').val();
+		var pword = $('#password').val();
+		var pword2 = $('#password2').val();
+		if(uname == '' || pword == '' || pword2 == '')
+		{
+			$('#error_message').html('');
+			$("#error_message").show();
+			$('#error_message').html("Semmi sem maradhat üres!");
+			setTimeout(function(){
+				$('#error_message').fadeOut("Slow");
+			}, 2000);
+		}
+		else
+		{
+			if(pword != pword2)
+			{
+				$('#error_message').html('');
+				$("#error_message").show();
+				$('#error_message').html("A jelszavak nem egyeznek!");
+				setTimeout(function(){
+					$('#error_message').fadeOut("Slow");
+				}, 2000);
+			}
+			else{
+				$.ajax({
+					url:"register.php",
+					method:"POST",
+					data:{uname:uname, pword:pword},
+					success:function(data){
+						if(data){
+							$('#error_message').html('');
+							$('#error_message').show().html("Ez a felhasználónév már létezik, válassz másikat.");
+							setTimeout(function(){
+								$('#error_message').fadeOut("Slow");
+							}, 3000);
+						}
+						else{
+							document.getElementById('registered').style.display = 'block';
+							document.getElementById('alreadyh').style.display = 'none';
+							$('#message_log').html('');
+							$("form").trigger("reset");
+							$('#message_log').show().html("Sikeresen regisztáltál. Jelentkezz be!");
+							setTimeout(function(){
+								$('#message_log').fadeOut("Slow");
+							}, 3000);
+						}
+					}
+				});
+			}}
+		}
+		function regise(e){
+	if (e.keyCode == 13){
+		var uname = $('#username').val();
+		var pword = $('#password').val();
+		var pword2 = $('#password2').val();
+		if(uname == '' || pword == '' || pword2 == '')
+		{
+			$('#error_message').html('');
+			$("#error_message").show();
+			$('#error_message').html("Semmi sem maradhat üres!");
+			setTimeout(function(){
+				$('#error_message').fadeOut("Slow");
+			}, 2000);
+		}
+		else
+		{
+			if(pword != pword2)
+			{
+				$('#error_message').html('');
+				$("#error_message").show();
+				$('#error_message').html("A jelszavak nem egyeznek!");
+				setTimeout(function(){
+					$('#error_message').fadeOut("Slow");
+				}, 2000);
+
+			}
+			else{
+				$.ajax({
+					url:"register.php",
+					method:"POST",
+					data:{uname:uname, pword:pword},
+					success:function(data){
+						if(data){
+							$('#error_message').html('');
+							$('#error_message').show().html("Ez a felhasználónév már létezik, válassz másikat.");
+							setTimeout(function(){
+								$('#error_message').fadeOut("Slow");
+							}, 3000);
+						}
+						else{
+							document.getElementById('loginform').style.display = 'block';
+							document.getElementById('register').style.display = 'none';
+							$('#message_log').html('');
+							$("form").trigger("reset");
+							$('#message_log').show().html("Sikeresen regisztáltál. Jelentkezz be!");
+							setTimeout(function(){
+								$('#message_log').fadeOut("Slow");
+							}, 3000);
+						}
+					}
+				});
+			}}
+			return false;
+		}
+ }
+</script>
 <?php
 	exit;
 }else{

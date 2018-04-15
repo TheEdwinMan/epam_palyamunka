@@ -49,6 +49,14 @@ ul li a{
   height: auto;
   margin-left: 10px;
 }
+.nkij{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 #content{
   float: left;
   height: 500px;

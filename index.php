@@ -6,16 +6,16 @@
   <body>
     <div id="space">
       <div id="logo">
-        <img id="kep" src="logo.png">
+        <img id="kep" class="nkij" src="logo.png">
       </div>
       <div id="Menu">
         <ul class="cssmenu">
-          <li><div class="aktv" id="leiras"><a>Leírás</a></div></li>
+          <li><div class="aktv" id="leiras"><a class="nkij">Leírás</a></div></li>
           <li></li>
           <li></li>
           <li></li>
           <li></li>
-          <li><div class="aktv" id="forms"><a>Bejelenzkezés</a></div></li>
+          <li><div class="aktv" id="forms"><a class="nkij">Bejelenzkezés</a></div></li>
         </ul>
       </div>
       <div id="content">

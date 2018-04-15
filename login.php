@@ -8,11 +8,13 @@ if(!isset($_SESSION['username'])){
 			<input type="password" id="password" placeholder="Jelszó">
 			<input type="password" id="password2" placeholder="Jelszó megerősítése">
 			<div class="button" href="#"><a class="nkij">Regisztrálás</a><br></div>
+			<span class = "spanszin" id="error_message"></span
 		</form>
 		<form id="login">
 			<input type="text" id="username_log" placeholder="Felhasználónév">
 			<input type="password" id="password_log" placeholder="Jelszó">
 			<div class="button" href="#"><a class="nkij">Bejelentkezés</a><br></div>
+			<span class = "spanszin" id="message_log"></span
 		</form>
 	</div>
 </div>

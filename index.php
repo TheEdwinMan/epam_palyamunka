@@ -123,7 +123,7 @@ if(!isset($_SESSION['username'])){
 
       $('#ghub').click(function(){
         $.ajax({
-          url: 'ghubt.php',
+          url: 'ghub.php',
           success: function(data) {
             $('#in-content').html(data);
           }

@@ -1,5 +1,51 @@
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 <script>
+function submitChat(){
+  if(form1.msg.value == ''){
+    alert("Az üzenet nem lehet üres!");
+    return;
+  }
+  var msg = form1.msg.value;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+      document.getElementById('uzenetek').innerHTML = xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open('GET','insert.php?&msg='+msg,true);
+  xmlhttp.send();
+  document.getElementById('msg').value = '';
+    $('#uzenetek').load('logs.php');
+    setTimeout(function (){
+      var d = $('#uzenetek');
+      d.scrollTop(d.prop("scrollHeight"));
+    }, 100);
+}
+
+function submitChate(e){
+  if (e.keyCode == 13){
+    if(form1.msg.value == ''){
+      alert("Az üzenet nem lehet üres!");
+      return;
+    }
+    var msg = form1.msg.value;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+      if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+        document.getElementById('uzenetek').innerHTML = xmlhttp.responseText;
+      }
+    }
+    xmlhttp.open('GET','insert.php?&msg='+msg,true);
+    xmlhttp.send();
+    document.getElementById('msg').value = '';
+      $('#uzenetek').load('logs.php');
+      setTimeout(function (){
+        var d = $('#uzenetek');
+        d.scrollTop(d.prop("scrollHeight"));
+      }, 100);
+      return false;
+  }
+}
 </script>
 <div id="kozep">
   <div class="chat">

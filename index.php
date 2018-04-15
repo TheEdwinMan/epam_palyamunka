@@ -2,6 +2,19 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <title>Epam feladat</title>
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script>
+    $(document).ready(function(){
+
+         $('.aktv').mouseenter(function(){
+           $(this).css("background-color", "blue");
+          });
+          $('.aktv').mouseleave(function(){
+            $(this).css("background-color", "#303030");
+           });
+
+       });
+  </script>
   </head>
   <body>
     <div id="space">

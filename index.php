@@ -151,7 +151,7 @@ if(!isset($_SESSION['username'])){
       <div id="content">
         <div id="in-content">
           <?php
-          include 'leiras.php'
+          include 'home.php'
           ?>
         </div>
       </div>

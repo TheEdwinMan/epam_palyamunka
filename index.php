@@ -33,6 +33,9 @@
       </div>
       <div id="content">
         <div id="in-content">
+		<?php
+			include 'leiras.php'
+        ?>
         </div>
       </div>
     </div>

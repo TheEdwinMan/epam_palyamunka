@@ -12,9 +12,9 @@ if(!isset($_SESSION['username'])){
 				<p class="message">Már regisztráltál? <a onclick="hide();" href="#">Jelentkezz be</a></p>
 			</form>
 			<form id="loginform">
-				<input type="text" id="username_log" placeholder="Felhasználónév">
-				<input type="password" id="password_log" placeholder="Jelszó">
-				<div class="button" href="#"><a class="nkij">Bejelentkezés</a><br></div>
+				<input type="text" id="username_log" placeholder="Felhasználónév" onkeypress="return logine(event);">
+				<input type="password" id="password_log" placeholder="Jelszó" onkeypress="return logine(event);">
+				<div class="button" id="login" onclick="login();" href="#"><a class="nkij">Bejelentkezés</a><br></div>
 				<span class = "spanszin" id="message_log"></span>
 				<p class="message">Nincs fiokod? <a onclick="hide();" href="#">Regisztálj</a></p>
 			</form>
@@ -142,6 +142,74 @@ if(!isset($_SESSION['username'])){
 			return false;
 		}
  }
+
+ function login(){
+	 var username = $('#username_log').val();
+	 var password = $('#password_log').val();
+	 if(username == '' || password == ''){
+		 $('#message_log').html('');
+		 $("#message_log").show();
+		 $('#message_log').html("Semmi sem maradhat üres!");
+		 setTimeout(function(){
+			 $('#message_log').fadeOut("Slow");
+		 }, 2000);
+	 }
+	 else{
+		 $.ajax({
+			 url:"belepes.php",
+			 method:"POST",
+			 data:{username:username, password:password},
+			 success:function(data){
+				 if(data){
+					 $("body").load("index.php").hide().show();
+				 }
+				 else{
+					 $('#message_log').html('');
+					 $('#message_log').show().html("Hibás vagy nem létező bejelenzkezési adatok.");
+					 setTimeout(function(){
+						 $('#message_log').fadeOut("Slow");
+					 }, 3000);
+				 }
+			 }
+		 });
+	 }
+ }
+
+ function logine(e){
+	 if (e.keyCode == 13){
+		 var username = $('#username_log').val();
+		 var password = $('#password_log').val();
+		 if(username == '' || password == ''){
+			 $('#message_log').html('');
+			 $("#message_log").show();
+			 $('#message_log').html("Semmi sem maradhat üres!");
+			 setTimeout(function(){
+				 $('#message_log').fadeOut("Slow");
+			 }, 2000);
+		 }
+		 else{
+			 $.ajax({
+				 url:"belepes.php",
+				 method:"POST",
+				 data:{username:username, password:password},
+				 success:function(data){
+					 if(data){
+						 $("body").load("index.php").hide().show();
+					 }
+					 else{
+						 $('#message_log').html('');
+						 $('#message_log').show().html("Hibás vagy nem létező bejelenzkezési adatok.");
+						 setTimeout(function(){
+							 $('#message_log').fadeOut("Slow");
+						 }, 3000);
+					 }
+				 }
+			 });
+		 }
+		 return false;
+	 }
+ }
+
 </script>
 <?php
 	exit;

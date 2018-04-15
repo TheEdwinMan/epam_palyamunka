@@ -87,7 +87,6 @@ if(!isset($_SESSION['username'])){
         });
       });
 
-
          $('.aktv').mouseenter(function(){
            $(this).css("background-color", "blue");
           });
@@ -123,11 +122,11 @@ if(!isset($_SESSION['username'])){
       </div>
       <div id="Menu">
         <ul class="cssmenu">
-          <li><div class="aktv" id="leiras"><a class="nkij">Leírás</a></div></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><div class="aktv" id="home"><a class="nkij">Kezdőlap</a></div></li>
+          <li><div class="aktv" id="chat"><a class="nkij">Chat</a></div></li>
+          <li><div class="aktv" id="settings"><a class="nkij">Beállítások</a></div></li>
+          <li><div class="aktv" id="ghub"><a class="nkij">Github</a></div></li>
+          <li><a href=""></a></li>
           <li><div class="aktv" href="#" id="logout"><a class="nkij">Kijelentkezés</a></div></li>
         </ul>
       </div>

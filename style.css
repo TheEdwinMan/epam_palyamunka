@@ -109,3 +109,15 @@ ul li a{
 .button:active{
 	background: #0000CD;
 }
+.form .message{
+	margin: 15px 0 0;
+	color: white;
+	font-size: 12px;
+}
+.form .message a{
+	color: #3232FF;
+	text-decoration: none;
+}
+#register{
+	display: none;
+}

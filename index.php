@@ -75,6 +75,19 @@ if(!isset($_SESSION['username'])){
     <script>
     $(document).ready(function(){
 
+      $('#logout').click(function(){
+        $.ajax({
+          url:"logout.php",
+          method:"POST",
+          success:function(data){
+            if(data){
+              $("body").load("index.php").hide().show();
+            }
+          }
+        });
+      });
+
+
          $('.aktv').mouseenter(function(){
            $(this).css("background-color", "blue");
           });
@@ -115,7 +128,7 @@ if(!isset($_SESSION['username'])){
           <li></li>
           <li></li>
           <li></li>
-          <li><div class="aktv" id="login"><a class="nkij">Bejelenzkezés</a></div></li>
+          <li><div class="aktv" href="#" id="logout"><a class="nkij">Kijelentkezés</a></div></li>
         </ul>
       </div>
       <div id="content">

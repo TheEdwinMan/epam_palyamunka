@@ -1,237 +1,34 @@
+<script type="text/javascript" src="js/stgbuttons.js"></script>
 <h2>Jelszó megváltoztatása:</h2>
 <div class="input-tulajd">
-  <form>
-    <div>
-      <input type="text" id="password" placeholder="Jelszó" onkeypress="return ujjelszoe(event);">
-      <input type="text" id="password2" placeholder="Jelszó megerősítése" onkeypress="return ujjelszoe(event);">
-      <div class="sttg-gomb" href="#" id="ujjel" onclick="ujjelszo();"><a class="nkij">Enter</a></div><br style="clear:both">
-      <span class="spanszin" id="error_ujjel"></span>
-      <span class="spanszin" id="success_uj"></span>
+	<form>
+	<div>
+		<input type="text" id="password" placeholder="Jelszó" onkeypress="return ujjelszoe(event);">
+		<input type="text" id="password2" placeholder="Jelszó megerősítése" onkeypress="return ujjelszoe(event);">
+		<div class="sttg-gomb" href="#" id="ujjel" onclick="ujjelszo();"><a class="nkij">Enter</a></div>
     </div>
-  </form>
-
+	</form>
 </div>
-<h2>Felhasználónév megváltoztatása:</h2>
+<div class="clear"></div>
+<span class="spanszin" id="error_ujjel"></span>
+<span class="spanszin" id="success_uj"></span>
+<h2 style="margin-top: 20px">Felhasználónév megváltoztatása:</h2>
 <div class="input-tulajd">
   <form>
     <div>
       <input type="text" id="username" placeholder="Felhasználónév" onkeypress="return ujfneve(event);">
-      <div class="sttg-gomb" href="#" id="ujnev" onclick="ujfnev();"><a class="nkij">Enter</a></div><br style="clear:both">
-      <span class="spanszin" id="error_ujnev"></span>
-      <span class="spanszin" id="success_ujnev"></span>
+      <div class="sttg-gomb" href="#" id="ujnev" onclick="ujfnev();"><a class="nkij">Enter</a></div>
     </div>
   </form>
 </div>
-<h2>Felhasználó törlése:</h2>
+<div class="clear"></div>
+<span class="spanszin" id="error_ujnev"></span>
+<span class="spanszin" id="success_ujnev"></span>
+<h2 style="margin-top: 20px">Felhasználó törlése:</h2>
   <form>
     <div class="input-tulajd">
-      <div class="sttg-gomb" href="#" id="torl" onclick="torles();"><a class="nkij">Törlés</a></div><br style="clear:both">
-    </div>
+		<div class="sttg-gomb" href="#" id="torl" onclick="torles();"><a class="nkij">Törlés</a></div>
+	</div>
   </form>
-  <span class="spanszin" id="error_torl"></span>
-  <script>
-		function torles(){
-			var bizti = confirm("Biztos hogy törlöd a felhasználót?");
-			if (bizti == true){
-				$.ajax({
-					url:"torles.php",
-					success:function(data){
-						if(data){}
-						else{
-							 $.ajax({
-								 url:"logout.php",
-								 method:"POST",
-								 success:function(data){
-									 if(data){
-										 $("body").load("index.php").hide().show();
-									 }
-								 }
-							 });
-						 }
-					 }
-				 });
-			 }else{
-				 $('#error_torl').html('');
-				 $('#error_torl').show().html("A felhasználó nem lett törölve.");
-				 setTimeout(function(){
-					 $('#error_torl').fadeOut("Slow");
-				 }, 2000);
-			 }
-		 }
-
-	function ujfneve(e){
-		if (e.keyCode == 13){
-			var uname = $('#username').val();
-			if(uname == ''){
-				$('#error_ujnev').html('');
-				$("#error_ujnev").show();
-				$('#error_ujnev').html("Nem maradhat üres!");
-				setTimeout(function(){
-					$('#error_ujnev').fadeOut("Slow");
-				}, 2000);
-			}
-			else
-			{
-				$.ajax({
-					url:"ujnev.php",
-					method:"POST",
-					data:{uname:uname},
-					success:function(data){
-						if(data){
-							$('#success_ujnev').html('');
-							$('#error_ujnev').html('');
-							$("form").trigger("reset");
-							$('#success_ujnev').show().html("Felhasználónév sikeresen megváltoztatva");
-							document.getElementById("f").innerHTML = data;
-							$('nev').html(data);
-							setTimeout(function(){
-								$('#success_ujnev').fadeOut("Slow");
-							}, 2000);
-						}
-						else{
-							$('#success_ujnev').html('');
-							$('#error_ujnev').html('');
-							$('#error_ujnev').show().html("Ez a név már létezik");
-							setTimeout(function(){
-								$('#error_ujnev').fadeOut("Slow");
-							}, 2000);
-						}
-					}
-				});
-			}
-			return false;
-		}
-	}
-
-	function ujfnev(){
-		var uname = $('#username').val();
-		if(uname == ''){
-			$('#error_ujnev').html('');
-			$("#error_ujnev").show();
-			$('#error_ujnev').html("Nem maradhat üres!");
-			setTimeout(function(){
-				$('#error_ujnev').fadeOut("Slow");
-			}, 2000);
-		}
-		else
-		{
-			$.ajax({
-				url:"ujnev.php",
-				method:"POST",
-				data:{uname:uname},
-				success:function(data){
-					if(data){
-						$('#success_ujnev').html('');
-						$('#error_ujnev').html('');
-						$("form").trigger("reset");
-						$('#success_ujnev').show().html("Felhasználónév sikeresen megváltoztatva");
-						document.getElementById("f").innerHTML = data;
-						$('nev').html(data);
-						setTimeout(function(){
-							$('#success_ujnev').fadeOut("Slow");
-						}, 2000);
-					}
-					else{
-						$('#success_ujnev').html('');
-						$('#error_ujnev').html('');
-						$('#error_ujnev').show().html("Ez a név már létezik");
-						setTimeout(function(){
-							$('#error_ujnev').fadeOut("Slow");
-						}, 2000);
-					}
-				}
-			});
-		}}
-
-		function ujjelszo(){
-			var pword = $('#password').val();
-			var pword2 = $('#password2').val();
-			if(pword == '' || pword2 == '')
-			{
-				$('#error_ujjel').html('');
-				$("#error_ujjel").show();
-				$('#error_ujjel').html("Semmi sem maradhat üres!");
-				setTimeout(function(){
-					$('#error_ujjel').fadeOut("Slow");
-				}, 2000);
-			}
-			else
-			{
-				if(pword != pword2)
-				{
-					$('#success_uj').html('');
-					$('#error_ujjel').html('');
-					$("#error_ujjel").show();
-					$('#error_ujjel').html("A jelszavak nem egyeznek!");
-					setTimeout(function(){
-						$('#error_ujjel').fadeOut("Slow");
-					}, 2000);
-				}
-				else{
-					$.ajax({
-						url:"ujjelszo.php",
-						method:"POST",
-						data:{pword:pword},
-						success:function(data){
-							if(data){}
-							else{
-								$('#success_uj').html('');
-								$('#error_ujjel').html('');
-								$("form").trigger("reset");
-								$('#success_uj').show().html("Jelszó sikeresen megváltoztatva");
-								setTimeout(function(){
-									$('#success_uj').fadeOut("Slow");
-								}, 2000);
-							}
-						}
-					});
-				}}
-			}
-			function ujjelszoe(e){
-				if (e.keyCode == 13){
-					var pword = $('#password').val();
-					var pword2 = $('#password2').val();
-					if(pword == '' || pword2 == '')
-					{
-						$('#error_ujjel').html('');
-						$("#error_ujjel").show();
-						$('#error_ujjel').html("Semmi sem maradhat üres!");
-						setTimeout(function(){
-							$('#error_ujjel').fadeOut("Slow");
-						}, 2000);
-					}
-					else
-					{
-						if(pword != pword2)
-						{
-							$('#success_uj').html('');
-							$('#error_ujjel').html('');
-							$("#error_ujjel").show();
-							$('#error_ujjel').html("A jelszavak nem egyeznek!");
-							setTimeout(function(){
-								$('#error_ujjel').fadeOut("Slow");
-							}, 2000);
-						}
-						else{
-							$.ajax({
-								url:"ujjelszo.php",
-								method:"POST",
-								data:{pword:pword},
-								success:function(data){
-									if(data){}
-									else{
-										$('#success_uj').html('');
-										$('#error_ujjel').html('');
-										$("form").trigger("reset");
-										$('#success_uj').show().html("Jelszó sikeresen megváltoztatva");
-										setTimeout(function(){
-											$('#success_uj').fadeOut("Slow");
-										}, 2000);
-									}
-								}
-							});
-						}}
-						return false;
-					}
-				}
-</script>
+<div class="clear"></div>
+<span class="spanszin" id="error_torl"></span>

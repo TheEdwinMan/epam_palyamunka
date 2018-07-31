@@ -1,2 +1,0 @@
-
-itt van a githubom

@@ -1,15 +1,14 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost','root','','epam');
-mysqli_select_db($con,'users');
+$con = mysqli_connect('localhost', 'root', '', 'epam');
+mysqli_select_db($con, 'users');
 $username = mysqli_real_escape_string($con, $_POST['username']);
 $password = mysqli_real_escape_string($con, $_POST['password']);
 
-$result = mysqli_query($con,"SELECT * FROM users WHERE username='$username' AND password='$password'");
-  if(mysqli_num_rows($result)){
+$result = mysqli_query($con, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+if (mysqli_num_rows($result)) {
     $res = mysqli_fetch_array($result);
     $_SESSION['username'] = $res['username'];
     $_SESSION['password'] = $res['password'];
     echo $res['username'];
-  }
-?>
+}

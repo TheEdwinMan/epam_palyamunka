@@ -1,234 +1,277 @@
-*{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-}
-body{
-  background: url("../img/9.jpg") fixed center;
-  margin: auto;
-  width: 1100px;
-}
-.aktv{
-  height: 38px;
-  padding: 25px 0 0 0;
-  cursor: pointer;
-}
-#menu{
-  width: 100%;
-}
-ul{
-  text-align: left;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-}
-ul li{
-  text-align: center;
-  font: bold 12px/18px sans-serif;
-  background: #303030;
-  display: table-cell;
-  width: 140px;
-  border-bottom: 4px solid blue;
-  vertical-align: middle;
-}
-ul li a{
-  text-decoration: none;
-  padding 25px 20px;
-  color: white;
-  font-size: 20px;
-}
-#space{
-  width: 840px;
-  margin: auto;
-  margin-top: 30px;
-}
-#logo{
-	background: white;
-  text-align: center;
-	padding: 10px;
-}
-#kep{
-  width: 25%;
-  height: auto;
-  margin-left: 10px;
-}
-.nkij{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-#content{
-  float: left;
-  height: 500px;
-  background-color: white;
-  width: 100%;
-}
-#in-content{
-  padding: 20px;
-}
-.login-page{
-	width: 360px;
-	margin: auto;
-}
-.form{
-	position: relative;
-	z-index: 1;
-	background-color: #303030;
-	max-width: 360px;
-	margin: 0 auto 100px;
-	padding: 45px;
-	text-align: center;
-}
-.form input{
-	font-family: "Roboto", sans-serif;
-	outline: 1;
-	background: #f2f2f2;
-	width: 265px;
-	border: 0;
-	margin: 0 0 15px;
-	padding: 15px;
-	box-sizing: border-box;
-	font-size: 14px;
-}
-.button{
-	font-family: "Roboto", sans-serif;
-	text-transform: uppercase;
-	outline: 0;
-	background: blue;
-	width: 236px;
-	border: 0;
-	padding: 15px;
-	color: #FFFFFF;
-	font-size: 14px;
-	cursor: pointer;
-  margin: auto;
-}
-.button:hover{
-	background: #3232FF;
-}
-.button:active{
-	background: #0000CD;
-}
-.form .message{
-	margin: 15px 0 0;
-	color: white;
-	font-size: 12px;
-}
-.form .message a{
-	color: #3232FF;
-	text-decoration: none;
-}
-#register{
-	display: none;
-}
-.spanszin{
-	color: red;
-	position: absolute
-}
-#nev{
-  padding: 5px;
-  width: auto;
-  display: inline-block;
-  background: white;
-  margin-top: -4px;
-  border: 4px solid blue;
-  text-align: center;
-}
-#kozep{
-  width: 500px;
-	margin: auto;
-}
-.chat{
-	background-color: #303030;
-	padding: 10px 10px 365px 10px;
-	height: 15px;
-  width: 100%;
-}
-#uzenetek{
-  background: white;
-  height: 300px;
-  padding: 10px 0 10px 10px;
-  word-wrap: break-word;
-  overflow-y: scroll;
-}
-.send{
-  float: left;
-  padding: 10px 0 0 0;
-}
-#msg{
-  font-family: "Roboto", sans-serif;
-  outline: 1;
-  background: #f2f2f2;
-  border: 0;
-  box-sizing: border-box;
-  font-size: 14px;
-  width: 365px;
-  height: 40px;
-  resize: none;
-  padding: 10px;
-}
-#chat-gomb{
-	font-family: "Roboto", sans-serif;
-	text-transform: uppercase;
-	outline: 0;
-	background: blue;
-	width: 50px;
-	border: 0;
-	padding: 12px 37px 12px 37px;
-	color: #FFFFFF;
-	font-size: 14px;
-	cursor: pointer;
-	margin: 10px 0 10px 10px;
-	float: left;
-}
-#chat-gomb:hover{
-	background: #3232FF;
-}
-#chat-gomb:active{
-	background: #0000CD;
-}
-.input-tulajd{
-	display: inline-block;
-	border: solid 10px #303030;
-	text-align: center;
-}
-.input-tulajd input{
-	font-family: "Roboto", sans-serif;
-	outline: 1;
-	background: #f2f2f2;
-	border: 0;
-	margin-right: 5px;
-	padding: 15px;
-	box-sizing: border-box;
-	font-size: 14px;
-	float:left;
-}
-.sttg-gomb{
-	font-family: "Roboto", sans-serif;
-	text-transform: uppercase;
-	outline: 0;
-	background: blue;
- 	width: 100px;
-	border: 0;
-	padding: 15px;
-	color: #FFFFFF;
-	font-size: 14px;
-	cursor: pointer;
-	float: left;
-}
-.sttg-gomb:hover{
-	background: #3232FF;
-}
-.sttg-gomb:active{
-	background: #0000CD;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
 }
 
+body {
+    background: url("../img/9.jpg") fixed center;
+    margin: auto;
+    width: 1100px;
+}
+
+.aktv {
+    height: 38px;
+    padding: 25px 0 0 0;
+    cursor: pointer;
+}
+
+#menu {
+    width: 100%;
+}
+
+ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+ul li {
+    text-align: center;
+    font: bold 12px/18px sans-serif;
+    background: #303030;
+    display: table-cell;
+    width: 140px;
+    border-bottom: 4px solid blue;
+    vertical-align: middle;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 25px 20px;
+    color: white;
+    font-size: 20px;
+}
+
+#space {
+    width: 840px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#logo {
+    background: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#kep {
+    width: 25%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.nkij {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#content {
+    float: left;
+    height: 500px;
+    background-color: white;
+    width: 100%;
+}
+
+#in-content {
+    padding: 20px;
+}
+
+.login-page {
+    width: 360px;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background-color: #303030;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 265px;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: blue;
+    width: 236px;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.button:hover {
+    background: #3232FF;
+}
+
+.button:active {
+    background: #0000CD;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: white;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #3232FF;
+    text-decoration: none;
+}
+
+#register {
+    display: none;
+}
+
+.spanszin {
+    color: red;
+    position: absolute
+}
+
+#nev {
+    padding: 5px;
+    width: auto;
+    display: inline-block;
+    background: white;
+    margin-top: -4px;
+    border: 4px solid blue;
+    text-align: center;
+}
+
+#kozep {
+    width: 500px;
+    margin: auto;
+}
+
+.chat {
+    background-color: #303030;
+    padding: 10px 10px 365px 10px;
+    height: 15px;
+    width: 100%;
+}
+
+#uzenetek {
+    background: white;
+    height: 300px;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+
+.send {
+    float: left;
+    padding: 10px 0 0 0;
+}
+
+#msg {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 365px;
+    height: 40px;
+    resize: none;
+    padding: 10px;
+}
+
+#chat-gomb {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: blue;
+    width: 50px;
+    border: 0;
+    padding: 12px 37px 12px 37px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0 10px 10px;
+    float: left;
+}
+
+#chat-gomb:hover {
+    background: #3232FF;
+}
+
+#chat-gomb:active {
+    background: #0000CD;
+}
+
+.input-tulajd {
+    display: inline-block;
+    border: solid 10px #303030;
+    text-align: center;
+}
+
+.input-tulajd input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    border: 0;
+    margin-right: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    float: left;
+}
+
+.sttg-gomb {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: blue;
+    width: 100px;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    float: left;
+}
+
+.sttg-gomb:hover {
+    background: #3232FF;
+}
+
+.sttg-gomb:active {
+    background: #0000CD;
+}
+
+.msgbox {
+    background: #E6E6FA;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px 0 0 0;
+    display: inline-block;
+}
 
 
 

@@ -1,4 +1,3 @@
-<script type="text/javascript" src="js/stgbuttons.js"></script>
 <h2>Jelszó megváltoztatása:</h2>
 <div class="input-tulajd">
     <form>

@@ -2,26 +2,31 @@
 <html>
 <head>
     <?php
-    include 'componens/head.php'
+    include 'components/head.php'
     ?>
 </head>
 <body>
 <div id="space">
     <div id="Menu">
         <?php
-        include 'componens/header.php'
+        include 'components/header.php'
         ?>
     </div>
     <div id="content">
         <div id="in-content">
             <?php
-            include 'home.php'
+            if (!isset($_SESSION['username'])):{
+                include 'pages/leiras.php';
+            } else:{
+                include 'pages/home.php';
+            }
+            endif;
             ?>
         </div>
     </div>
 </div>
 <?php
-include 'componens/nevlec.php'
+include 'components/nevlec.php'
 ?>
 </body>
 </html>

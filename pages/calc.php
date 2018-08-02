@@ -1,4 +1,3 @@
-<script type="text/javascript" src="js/calc.js"></script>
 <div id="calculator">
     <div class="row">
         <div style="position: relative; display: inline-block; float: left;">

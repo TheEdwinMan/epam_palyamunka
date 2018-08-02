@@ -1,9 +1,6 @@
 <?php
 if (!isset($_SESSION['username'])) {
     ?>
-    <script src="js/register.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/change.js"></script>
     <div class="login-page">
         <div class="form">
             <form id="register">

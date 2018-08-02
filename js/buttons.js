@@ -1,6 +1,6 @@
 function leiras() {
     $.ajax({
-        url: 'leiras.php',
+        url: 'pages/leiras.php',
         success: function (data) {
             $('#in-content').html(data);
         }
@@ -9,7 +9,7 @@ function leiras() {
 
 function log() {
     $.ajax({
-        url: 'login.php',
+        url: 'pages/login.php',
         success: function (data) {
             $('#in-content').html(data);
         }
@@ -18,7 +18,7 @@ function log() {
 
 function home() {
     $.ajax({
-        url: 'home.php',
+        url: 'pages/home.php',
         success: function (data) {
             $('#in-content').html(data);
         }
@@ -27,7 +27,7 @@ function home() {
 
 function chat() {
     $.ajax({
-        url: 'chat.php',
+        url: 'pages/chat.php',
         success: function (data) {
             $('#in-content').html(data);
         }
@@ -36,7 +36,7 @@ function chat() {
 
 function stg() {
     $.ajax({
-        url: 'settings.php',
+        url: 'pages/settings.php',
         success: function (data) {
             $('#in-content').html(data);
         }
@@ -45,7 +45,7 @@ function stg() {
 
 function cal() {
     $.ajax({
-        url: 'calc.php',
+        url: 'pages/calc.php',
         success: function (data) {
             $('#in-content').html(data);
         }

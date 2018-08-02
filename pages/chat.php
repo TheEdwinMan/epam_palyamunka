@@ -1,4 +1,3 @@
-<script type="text/javascript" src="js/chat.js"></script>
 <div id="kozep">
     <div class="chat">
         <div id="uzenetek">

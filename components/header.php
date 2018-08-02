@@ -2,7 +2,6 @@
     <img id="kep" class="nkij" src="img/logo.png">
 </div>
 <?php
-session_start();
 if (!isset($_SESSION['username'])):{
     ?>
     <ul class="cssmenu">

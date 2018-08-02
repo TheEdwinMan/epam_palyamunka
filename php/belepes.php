@@ -1,6 +1,5 @@
 <?php
-session_start();
-$con = mysqli_connect('localhost', 'root', '', 'epam');
+include '../config/config.php';
 mysqli_select_db($con, 'users');
 $username = mysqli_real_escape_string($con, $_POST['username']);
 $password = mysqli_real_escape_string($con, $_POST['password']);

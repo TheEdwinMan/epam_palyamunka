@@ -2,14 +2,15 @@
 <html>
 <head>
     <?php
-    include 'components/head.php'
+    include 'config/config.php';
+    include 'components/head.php';
     ?>
 </head>
 <body>
 <div id="space">
     <div id="Menu">
         <?php
-        include 'components/header.php'
+        include 'components/header.php';
         ?>
     </div>
     <div id="content">
@@ -26,7 +27,7 @@
     </div>
 </div>
 <?php
-include 'components/nevlec.php'
+include 'components/nevlec.php';
 ?>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root', '', 'epam');
+include '../config/config.php';
 mysqli_select_db($con, 'users');
 
 if (isset($_POST['uname'])) {

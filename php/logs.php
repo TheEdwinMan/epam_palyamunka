@@ -1,6 +1,5 @@
 <?php
-session_start();
-$con = mysqli_connect('localhost', 'root', '', 'epam');
+include '../config/config.php';
 mysqli_select_db($con, 'logs');
 $uname = $_SESSION['username'];
 $result1 = mysqli_query($con, "SELECT * FROM logs ORDER by id ASC");

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style/styles.css">
 <link rel="stylesheet" href="style/calcstyles.css">
 <title>Epam feladat</title>
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/logout.js"></script>
 <script type="text/javascript" src="js/buttons.js"></script>
 <script type="text/javascript" src="js/calc.js"></script>

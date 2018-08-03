@@ -4,19 +4,19 @@ function regis() {
     var pword2 = $('#password2').val();
     if (uname == '' || pword == '' || pword2 == '') {
         $('#error_message').html('');
-        $("#error_message").show();
+        $("#error_message").animate({opacity: 1});
         $('#error_message').html("Semmi sem maradhat üres!");
         setTimeout(function () {
-            $('#error_message').fadeOut("Slow");
+            $('#error_message').animate({opacity: 0});
         }, 2000);
     }
     else {
         if (pword != pword2) {
             $('#error_message').html('');
-            $("#error_message").show();
+            $("#error_message").animate({opacity: 1});
             $('#error_message').html("A jelszavak nem egyeznek!");
             setTimeout(function () {
-                $('#error_message').fadeOut("Slow");
+                $('#error_message').animate({opacity: 0});
             }, 2000);
 
         }
@@ -28,19 +28,21 @@ function regis() {
                 success: function (data) {
                     if (data) {
                         $('#error_message').html('');
-                        $('#error_message').show().html("Ez a felhasználónév már létezik, válassz másikat.");
+                        $("#error_message").animate({opacity: 1});
+                        $('#error_message').html("Ez a felhasználónév már létezik, válassz másikat.");
                         setTimeout(function () {
-                            $('#error_message').fadeOut("Slow");
+                            $('#error_message').animate({opacity: 0});
                         }, 3000);
                     }
                     else {
                         document.getElementById('loginform').style.display = 'block';
                         document.getElementById('register').style.display = 'none';
                         $('#message_log').html('');
+                        $("#error_message").animate({opacity: 1});
                         $("form").trigger("reset");
-                        $('#message_log').show().html("Sikeresen regisztáltál. Jelentkezz be!");
+                        $('#message_log').html("Sikeresen regisztáltál. Jelentkezz be!");
                         setTimeout(function () {
-                            $('#message_log').fadeOut("Slow");
+                            $('#message_log').animate({opacity: 0});
                         }, 3000);
                     }
                 }
@@ -56,19 +58,19 @@ function regise(e) {
         var pword2 = $('#password2').val();
         if (uname == '' || pword == '' || pword2 == '') {
             $('#error_message').html('');
-            $("#error_message").show();
+            $("#error_message").animate({opacity: 1});
             $('#error_message').html("Semmi sem maradhat üres!");
             setTimeout(function () {
-                $('#error_message').fadeOut("Slow");
+                $('#error_message').animate({opacity: 0});
             }, 2000);
         }
         else {
             if (pword != pword2) {
                 $('#error_message').html('');
-                $("#error_message").show();
+                $("#error_message").animate({opacity: 1});
                 $('#error_message').html("A jelszavak nem egyeznek!");
                 setTimeout(function () {
-                    $('#error_message').fadeOut("Slow");
+                    $('#error_message').animate({opacity: 0});
                 }, 2000);
             }
             else {
@@ -79,19 +81,21 @@ function regise(e) {
                     success: function (data) {
                         if (data) {
                             $('#error_message').html('');
-                            $('#error_message').show().html("Ez a felhasználónév már létezik, válassz másikat.");
+                            $("#error_message").animate({opacity: 1});
+                            $('#error_message').html("Ez a felhasználónév már létezik, válassz másikat.");
                             setTimeout(function () {
-                                $('#error_message').fadeOut("Slow");
+                                $('#error_message').animate({opacity: 0});
                             }, 3000);
                         }
                         else {
                             document.getElementById('loginform').style.display = 'block';
                             document.getElementById('register').style.display = 'none';
                             $('#message_log').html('');
+                            $("#error_message").animate({opacity: 1});
                             $("form").trigger("reset");
-                            $('#message_log').show().html("Sikeresen regisztáltál. Jelentkezz be!");
+                            $('#message_log').html("Sikeresen regisztáltál. Jelentkezz be!");
                             setTimeout(function () {
-                                $('#message_log').fadeOut("Slow");
+                                $('#message_log').animate({opacity: 0});
                             }, 3000);
                         }
                     }

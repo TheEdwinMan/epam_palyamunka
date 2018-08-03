@@ -2,11 +2,11 @@ function login() {
     var username = $('#username_log').val();
     var password = $('#password_log').val();
     if (username == '' || password == '') {
+        $('#message_log').animate({ opacity: 1 });
         $('#message_log').html('');
-        $("#message_log").show();
         $('#message_log').html("Semmi sem maradhat üres!");
         setTimeout(function () {
-            $('#message_log').fadeOut("Slow");
+            $('#message_log').animate({ opacity: 0 });
         }, 2000);
     }
     else {
@@ -19,10 +19,11 @@ function login() {
                     $("body").load("index.php").hide().show();
                 }
                 else {
+                    $('#message_log').animate({ opacity: 1 });
                     $('#message_log').html('');
                     $('#message_log').show().html("Hibás vagy nem létező bejelenzkezési adatok.");
                     setTimeout(function () {
-                        $('#message_log').fadeOut("Slow");
+                        $('#message_log').animate({opacity: 0});
                     }, 3000);
                 }
             }
@@ -35,11 +36,11 @@ function logine(e) {
         var username = $('#username_log').val();
         var password = $('#password_log').val();
         if (username == '' || password == '') {
+            $('#message_log').animate({ opacity: 1 });
             $('#message_log').html('');
-            $("#message_log").show();
             $('#message_log').html("Semmi sem maradhat üres!");
             setTimeout(function () {
-                $('#message_log').fadeOut("Slow");
+                $('#message_log').animate({ opacity: 0 });
             }, 2000);
         }
         else {
@@ -52,10 +53,11 @@ function logine(e) {
                         $("body").load("index.php").hide().show();
                     }
                     else {
+                        $('#message_log').animate({ opacity: 1 });
                         $('#message_log').html('');
                         $('#message_log').show().html("Hibás vagy nem létező bejelenzkezési adatok.");
                         setTimeout(function () {
-                            $('#message_log').fadeOut("Slow");
+                            $('#message_log').animate({ opacity: 0 });
                         }, 3000);
                     }
                 }

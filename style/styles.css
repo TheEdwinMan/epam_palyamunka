@@ -11,16 +11,32 @@ body {
     width: 1100px;
 }
 
-.aktv {
-    height: 38px;
-    padding: 25px 0 0 0;
-    cursor: pointer;
-}
-
 #menu {
     width: 100%;
 }
+.mbutt {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
 
+li .mbutt div {
+    padding: 25px 20px;
+    height: 20px;
+}
+li .mbutt div:hover {
+    background: #0000FF;
+}
+li .mbutt div:active {
+     background: #0000d8;
+ }
+li{
+    display: inline-block;
+}
 ul {
     text-align: left;
     display: inline;
@@ -42,7 +58,6 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    padding: 25px 20px;
     color: white;
     font-size: 20px;
 }
@@ -63,15 +78,11 @@ ul li a {
     width: 25%;
     height: auto;
     margin-left: 10px;
-}
-
-.nkij {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
 }
 
 #content {
@@ -117,9 +128,9 @@ ul li a {
     text-transform: uppercase;
     outline: 0;
     background: blue;
-    width: 236px;
+    width: 200px;
     border: 0;
-    padding: 15px;
+    padding: 15px 32.5px 15px 32.5px;
     color: #FFFFFF;
     font-size: 14px;
     cursor: pointer;
@@ -273,7 +284,8 @@ ul li a {
     margin: 5px 0 0 0;
     display: inline-block;
 }
-.message_css{
+
+.message_css {
     color: red;
     opacity: 0;
     margin: 10px 0 10px 0;

@@ -1,38 +1,38 @@
 <div id="logo">
-    <img id="kep" class="nkij" src="img/logo.png">
+    <img id="kep" src="img/logo.png">
 </div>
 <?php
 if (!isset($_SESSION['username'])):{
     ?>
     <ul class="cssmenu">
         <li>
-            <div class="aktv" id="leiras" onclick="leiras()"><a class="nkij">Leírás</a></div>
+            <a class="mbutt" href="#" id="leiras" onclick="leiras()"><div>Leírás</div></a>
         </li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li>
-            <div class="aktv" id="login" onclick="log()"><a class="nkij">Bejelenzkezés</a></div>
+            <a class="mbutt" href="#" id="login" onclick="log()"><div>Bejelenzkezés</div></a>
         </li>
     </ul>
 <?php } else:{ ?>
     <ul class="cssmenu">
         <li>
-            <div class="aktv" id="home" onclick="home()"><a class="nkij">Kezdőlap</a></div>
+            <a class="mbutt" href="#" id="home" onclick="home()"><div>Kezdőlap</div></a>
         </li>
         <li>
-            <div class="aktv" id="chat" onclick="chat()"><a class="nkij">Chat</a></div>
+            <a class="mbutt" href="#" id="chat" onclick="chat()"><div>Chat</div></a>
         </li>
         <li>
-            <div class="aktv" id="settings" onclick="stg()"><a class="nkij">Beállítások</a></div>
+            <a class="mbutt" href="#" id="settings" onclick="stg()"><div>Beállítások</div></a>
         </li>
         <li>
-            <div class="aktv" id="calc" onclick="cal()"><a class="nkij">Számológép</a></div>
+            <a class="mbutt" href="#" id="calc" onclick="cal()"><div>Számológép</div></a>
         </li>
         <li><a href=""></a></li>
         <li>
-            <div class="aktv" href="#" id="logout" onclick="lout()"><a class="nkij">Kijelentkezés</a></div>
+            <a class="mbutt" href="#" href="#" id="logout" onclick="lout()"><div>Kijelentkezés</div></a>
         </li>
     </ul>
 <?php }

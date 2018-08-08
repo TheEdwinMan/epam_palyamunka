@@ -30,7 +30,7 @@ if (!isset($_SESSION['username'])) {
     <?php
     exit;
 } else {
-    include 'leiras.php';
+    include 'home.php';
 }
 
 ?>

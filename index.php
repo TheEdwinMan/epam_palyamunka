@@ -15,26 +15,8 @@
     </div>
     <div id="content">
         <div id="in-content">
-
             <?php
-            if (isset($_GET['page'])):{
-                $p = $_GET['page'];
-                $page = "pages/" . $p . ".php";
-                if (file_exists($page)):{
-                    include($page);
-                } else:{
-                    echo "nope";
-                }
-                endif;
-            } else:{
-                if (!isset($_SESSION['username'])):{
-                    include 'pages/leiras.php';
-                } else:{
-                    include 'pages/home.php';
-                }
-                endif;
-            }
-            endif;
+            include 'components/pages.php';
             ?>
         </div>
     </div>

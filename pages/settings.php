@@ -1,3 +1,6 @@
+<?php
+if (isset($_SESSION['username'])):{
+    ?>
 <h2>Jelszó megváltoztatása:</h2>
 <div class="input-tulajd">
     <form>
@@ -31,3 +34,9 @@
 </form>
 <div class="clear"></div>
 <span class="spanszin" id="error_torl"></span>
+    <?php
+} else:{
+    include 'pages/leiras.php';
+}
+endif;
+?>

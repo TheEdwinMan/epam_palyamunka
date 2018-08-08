@@ -1,3 +1,6 @@
+<?php
+if (isset($_SESSION['username'])):{
+?>
 <div id="kozep">
     <div class="chat">
         <div id="uzenetek">
@@ -11,3 +14,9 @@
         </form>
     </div>
 </div>
+    <?php
+} else:{
+    include 'pages/leiras.php';
+}
+endif;
+?>

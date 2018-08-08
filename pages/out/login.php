@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
             <form id="loginform">
                 <input type="text" id="username_log" placeholder="Felhasználónév" onkeypress="return logine(event);">
                 <input type="password" id="password_log" placeholder="Jelszó" onkeypress="return logine(event);">
-                <a class="mbutt"  id="login" onclick="login();" href="#">
+                <a class="mbutt" id="login" onclick="login();" href="#">
                     <div class="button">Bejelentkezés</div>
                 </a>
                 <div class="clear"></div>
@@ -28,9 +28,7 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
     <?php
-    exit;
 } else {
     include 'home.php';
 }
-
 ?>

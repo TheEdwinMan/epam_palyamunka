@@ -1,3 +1,4 @@
+
 <?php
 $cur = "";
 if (isset($_GET['page']) && !isset($_SESSION['username'])):{

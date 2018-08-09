@@ -44,8 +44,8 @@ endif;
                     oldal = data;
                     console.log(oldal);
                     var tab = document.getElementById(data);
-                    tab.classList.remove("mbutt");
-                    tab.classList.add("mbuttoff");
+                    tab.classList.remove("button-links");
+                    tab.classList.add("menu__button-links--disabled");
                     tab.removeAttribute("href");
                 }
                 else {

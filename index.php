@@ -7,14 +7,14 @@
     ?>
 </head>
 <body>
-<div id="space">
-    <div id="Menu">
+<div class="space">
+    <div class="menu">
         <?php
         include 'components/header.php';
         ?>
     </div>
-    <div id="content">
-        <div id="in-content">
+    <div class="space__content">
+        <div class="space__content__in-content">
             <?php
             include 'components/pages.php';
             ?>

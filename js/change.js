@@ -1,12 +1,12 @@
 function hide() {
-    var loginform = document.getElementById('loginform');
-    var register = document.getElementById('register');
-    if (loginform.style.display == 'none') {
-        loginform.style.display = 'block';
-        register.style.display = 'none';
+    var loginform = document.getElementsByClassName('login-page__login');
+    var register = document.getElementsByClassName('login-page__register');
+    if (loginform[0].style.display == 'none') {
+        loginform[0].style.display = 'block';
+        register[0].style.display = 'none';
     }
     else {
-        loginform.style.display = 'none';
-        register.style.display = 'block';
+        loginform[0].style.display = 'none';
+        register[0].style.display = 'block';
     }
 }

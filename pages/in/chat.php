@@ -1,8 +1,7 @@
 <?php
 if (isset($_SESSION['username'])):{
     ?>
-    <div id="kozep">
-        <div class="chat">
+        <div class="content__chat">
             <div id="uzenetek">
             </div>
             <form name="form1" style="color: white;">
@@ -14,7 +13,6 @@ if (isset($_SESSION['username'])):{
                 <br>
             </form>
         </div>
-    </div>
     <?php
 } else:{
     include 'pages/leiras.php';

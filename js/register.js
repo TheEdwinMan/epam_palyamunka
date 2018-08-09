@@ -35,8 +35,8 @@ function regis() {
                         }, 3000);
                     }
                     else {
-                        document.getElementById('loginform').style.display = 'block';
-                        document.getElementById('register').style.display = 'none';
+                        document.getElementsByClassName('login-page__login')[0].style.display = 'block';
+                        document.getElementsByClassName('login-page__register')[0].style.display = 'none';
                         $('#message_log').html('');
                         $("#error_message").animate({opacity: 1});
                         $("form").trigger("reset");
@@ -88,8 +88,8 @@ function regise(e) {
                             }, 3000);
                         }
                         else {
-                            document.getElementById('loginform').style.display = 'block';
-                            document.getElementById('register').style.display = 'none';
+                            document.getElementsByClassName('login-page__login')[0].style.display = 'block';
+                            document.getElementsByClassName('login-page__register')[0].style.display = 'none';
                             $('#message_log').html('');
                             $("#error_message").animate({opacity: 1});
                             $("form").trigger("reset");
